@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase 9</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* Align content vertically */
+        }
+
+        #dropdowns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px; /* Add space between dropdowns and table */
+        }
+
+        select {
+            margin: 5px;
+        }
+
+        #dataTable {
+            border-collapse: collapse;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: center; /* Center-align content within cells */
+            width: 10%; /* Example width; adjust as needed */
+            overflow: hidden; /* Prevent content overflow */
+            white-space: nowrap; /* Prevent line breaks */
+            text-overflow: ellipsis; /* Show ellipsis for overflowing content */
+        }
+
+        th {
+            background-color: #f0f0f0; /* Header background color */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>AgriInsight</h1>
+    <div id="dropdowns">
+        <select id="stateDropdown">
+            <option value="" disabled selected>Select a state</option>
+        </select>
+        
+        <select id="districtDropdown">
+            <option value="" disabled selected>Select a district</option>
+        </select>
+
+        <select id="cropDropdown">
+            <option value="" disabled selected>Select a crop</option>
+        </select>
+    </div>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>State</th>
+                <th>District</th>
+                <th>Crop</th>
+                <th>NPK Ratio</th>
+                <th>Harvest</th>
+                <th>Rainfall (mm/year)</th>
+                <th>Irrigation (litres/day)</th>
+                <th>Soil type</th>
+                <th>Soil pH</th>
+                <th>Cost of cultivation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data rows will be appended here -->
+        </tbody>
+    </table>
+
+    <script src="bundle.js"></script>
+</body>
+</html>
